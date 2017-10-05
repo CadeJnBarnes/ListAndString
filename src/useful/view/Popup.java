@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class Popup
 {
+	// This method is a popup that makes you respond before going away.
+	//Displays the supplied message in a popup method
 	public void displayText(String message)
 	{
 		JOptionPane.showMessageDialog(null, message);
