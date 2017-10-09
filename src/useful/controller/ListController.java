@@ -25,6 +25,7 @@ public class ListController
 		fillTheList();
 		showTheList();
 		changeTheList();
+		practiceWithList();
 	}
 	
 	private void showTheList()
@@ -95,10 +96,10 @@ public class ListController
 		donutList.get(donutList.size()-1);
 		donutList.add(removed);
 		removed = donutList.set(4, new Donut());
-		for (int woop = 0; woop < 5; woop += 1)
-		{
-			display.displayText("Your Donut chosen");
-		}
+//		for (int woop = 0; woop < 5; woop += 1)
+//		{
+//			display.displayText("Your Donut chosen ");
+//		}
 		String donutRemove = display.getResponse("What donut do you want to eat?");
 		
 		
