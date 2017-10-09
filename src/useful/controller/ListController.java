@@ -84,7 +84,7 @@ public class ListController
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
 		
 	}
-	
+	// Here is where I practiced my add, remove and get methods
 	private void practiceWithList()
 	{
 		Donut removed = donutList.remove(2);
@@ -99,6 +99,7 @@ public class ListController
 		{
 			display.displayText("Your Donut chosen");
 		}
+		String donutRemove = display.getResponse("What donut do you want to eat?");
 		
 		
 	}
