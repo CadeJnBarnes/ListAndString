@@ -30,4 +30,20 @@ public class Donut
 		
 		return description;
 	}
+	
+	public String getShape()
+	{
+	return shape;	
+	}
+	
+	public void setShape(String shape)
+	{
+		this.shape = shape;
+	}
+	
+	public String getFlavor()
+	{
+		return flavor;
+	}
+	
 }
