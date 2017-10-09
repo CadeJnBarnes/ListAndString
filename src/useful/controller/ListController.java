@@ -54,7 +54,7 @@ public class ListController
 		
 	}
 	
-	
+	// types that fill the list
 	private void fillTheList()
 	{
 		Donut jellyFilled = new Donut("jelly filled");
@@ -70,7 +70,7 @@ public class ListController
 		donutList.add(krispyKreme);		
 	}
 
-	
+	//How to add and remove things from the list
 	private void changeTheList()
 	{
 		display.displayText("The list is this big: " + donutList.size());
