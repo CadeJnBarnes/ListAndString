@@ -3,19 +3,20 @@ package useful.controller;
 import useful.model.Donut;
 import java.util.List;
 import java.util.ArrayList;
-import useful.view.Popup;
+import useful.view.PopupDisplay;
 
-public class ToolController
+public class ListController
 {
 	private List<Donut> donutList;
-	private Popup display;
+	private PopupDisplay display;
 	// The parens at the end of each word means that it is calling to something else.
-	public ToolController()
+	public ListController()
 	{
 		donutList = new ArrayList<Donut>();
-		display = new Popup();
+		display = new PopupDisplay();
 	}
 	
+
 	public void start()
 	{
 		Donut temp = new Donut();
@@ -80,10 +81,36 @@ public class ToolController
 		
 		display.displayText("The list still contains: " + donutList.size() + " items.");
 		removed = donutList.set(3, new Donut());
-		display.displayText("The dout with flavor " + removed.getFlavor() + " has been removed.");
+		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
 		
 	}
 	
+	private void practiceWithList()
+	{
+		Donut removed = donutList.remove(2);
+		display.displayText("Let's add another donut!"); 
+		String unconverted = display.getResponse("What should it be called?");
+		donutList.add(new Donut(unconverted));
+		display.displayText("New Donut added!");
+		donutList.get(donutList.size()-1);
+		donutList.add(removed);
+		removed = donutList.set(4, new Donut());
+		for (int woop = 0; woop < 5; woop += 1)
+		{
+			display.displayText("Your Donut chosen");
+		}
+		
+		
+	}
+
+	public ArrayList<Donut> getDonutList()
+	{
+		return (ArrayList<Donut>) donutList;
+	}
 	
+	public PopupDisplay getDisplay()
+	{
+		return display;
+	}
 	
 }

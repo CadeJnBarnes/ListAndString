@@ -2,7 +2,7 @@ package useful.view;
 
 import javax.swing.JOptionPane;
 
-public class Popup
+public class PopupDisplay
 {
 	// This method is a popup that makes you respond before going away.
 	//Displays the supplied message in a popup method
