@@ -16,14 +16,14 @@ public class ListController
 		display = new PopupDisplay();
 	}
 	
-
+// This is where I link everything to the running part of the program
 	public void start()
 	{
 		Donut temp = new Donut();
 		
 		donutList.add(temp);
 		fillTheList();
-//		showTheList();
+		showTheList();
 		changeTheList();
 	}
 	
