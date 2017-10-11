@@ -19,7 +19,17 @@ public class ListController
 // This is where I link everything to the running part of the program
 	public void start()
 	{
+		//Here we see hoe to find the longest word in a text.
 		Donut temp = new Donut();
+		ArrayList<String> tempList = new ArrayList<String>();
+		tempList.add("this is a word sequence");
+		tempList.add("DonutTests.zip");
+		tempList.add("");
+		tempList.add("My name is cade");
+		tempList.add("DonutTest.zip2");
+		
+		display.displayText("The longest string in the tempList is: " + maxLength(tempList) + " long");
+		display.displayText("It is: " + longestString(tempList));
 		
 		donutList.add(temp);
 		fillTheList();
@@ -85,6 +95,38 @@ public class ListController
 		display.displayText("The donut with flavor " + removed.getFlavor() + " has been removed.");
 		
 	}
+	
+	public int maxLength(ArrayList<String> myList)
+	{
+		int max = 0;
+		
+		for(int index = 0;index < myList.size(); index += 1)
+		{
+			if (max < myList.get(index).length())
+			{
+				max = myList.get(index).length();
+			}
+		}
+		return max;
+	}
+	
+	public String longestString(ArrayList<String> myList)
+	{
+		String longest = "";
+		int max = 0;
+		for(int index = 0; index < myList.size(); index += 1)
+		{
+			if (myList.get(index).length() > max)
+			{
+				max = myList.get(index).length();
+				longest = myList.get(index);
+			}
+		}
+			
+			return longest;
+	}
+	
+	
 	// Here is where I practiced my add, remove and get methods
 	private void practiceWithList()
 	{
